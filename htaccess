@@ -1,0 +1,50 @@
+# BEGIN WordPress
+# Dyrektywy zawarte między "BEGIN WordPress" oraz "END WordPress"
+# są generowane dynamicznie i powinny być modyfikowane tylko za pomocą
+# filtrów WordPressa. Zmiany dokonane bezpośrednio tutaj będą nadpisywane.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN Security
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+</Files>
+<Files wp-config.php>
+order deny,allow
+deny from all
+</Files>
+<Files readme.html>
+order deny,allow
+deny from all
+</Files>
+<Files wp-config.php>
+order deny,allow
+deny from all
+</Files>
+<Files license.txt>
+order deny,allow
+deny from all
+</Files>
+<Files wp-config-sample.php>
+order deny,allow
+deny from all
+</Files>
+<Files .htaccess.bk>
+order deny,allow
+deny from all
+</Files>
+<files ~ "^.*.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+# END Security
