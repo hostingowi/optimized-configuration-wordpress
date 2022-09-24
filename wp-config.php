@@ -6,7 +6,7 @@ define('WP_SITEURL','https://twojastrona.pl');
 define('DB_NAME','nazwa bazy danych');
 define('DB_USER','użytkownik bazy danych');
 define('DB_PASSWORD','hasł bazy danych');
-define('DB_HOST','codeasy.mysql.dhosting.pl:3306');
+define('DB_HOST','adres bazy danych');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 $table_prefix = 'prefix_';
